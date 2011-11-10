@@ -6,7 +6,7 @@
     <em:name>Show All Body Parts</em:name>
     <em:version>1.1</em:version>
     <em:creator>Jonathan Kamens</em:creator>
-    <em:description>Enable the Show | Message Body As | All Body Parts message display mode, which causes all parts of the message, even those that normally would not be displayed, to be visible in the message viewing area (if Thunderbird knows how to display them) and listed in the attachments pane.
+    <em:description>Enable the View | Message Body As | All Body Parts message display mode, which causes all parts of the message, even those that normally would not be displayed, to be visible in the message viewing area (if Thunderbird knows how to display them) and listed in the attachments pane.
 You might need this if someone sends you a message with a &#8220;hidden&#8221; attachment, i.e., a message whose structure is malformatted such that Thunderbird is &#8220;correct&#8221; not to display it, but you still need to get access to it.
 You might also need this if you want to be able to remove inline images from messages. Inline images normally are not displayed in the attachments pane, but the All Body Parts message display mode makes them visible.</em:description>
     <em:homepageURL>https://addons.mozilla.org/en-US/thunderbird/addon/show-all-body-parts/</em:homepageURL>

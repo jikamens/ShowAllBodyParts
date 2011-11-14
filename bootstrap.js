@@ -13,8 +13,8 @@ function getActive() {
 }
 
 function observer(aSubject, aTopic, aData) {
-    prefBranch.setBoolPref(pref1, false);
     prefBranch2.removeObserver(pref2, observer);
+    prefBranch.setBoolPref(pref1, false);
 }
 
 function startup() {
@@ -28,8 +28,8 @@ function startup() {
 function shutdown() {
     var active = getActive();
     if (active) {
-	prefBranch.setBoolPref(pref2, false);
 	prefBranch2.removeObserver(pref2, observer);
+	prefBranch.setBoolPref(pref2, false);
     }
 }
 

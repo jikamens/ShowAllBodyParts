@@ -1,7 +1,7 @@
 var prefBranch = Components.classes["@mozilla.org/preferences-service;1"]
     .getService(Components.interfaces.nsIPrefBranch);
-var prefBranch2 = prefBranch
-    .QueryInterface(Components.interfaces.nsIPrefBranch2);
+if (! ("addObserver" in prefBranch))
+    prefBranch.QueryInterface(Components.interfaces.nsIPrefBranch2);
 var pref1 = "extensions.ShowAllBodyParts.active";
 var pref2 = "mailnews.display.show_all_body_parts_menu";
 
@@ -13,7 +13,7 @@ function getActive() {
 }
 
 function observer(aSubject, aTopic, aData) {
-    prefBranch2.removeObserver(pref2, observer);
+    prefBranch.removeObserver(pref2, observer);
     prefBranch.setBoolPref(pref1, false);
 }
 
@@ -21,14 +21,14 @@ function startup() {
     var active = getActive();
     if (active) {
 	prefBranch.setBoolPref(pref2, true);
-	prefBranch2.addObserver(pref2, observer, false);
+	prefBranch.addObserver(pref2, observer, false);
     }
 }
 
 function shutdown() {
     var active = getActive();
     if (active) {
-	prefBranch2.removeObserver(pref2, observer);
+	prefBranch.removeObserver(pref2, observer);
 	prefBranch.setBoolPref(pref2, false);
     }
 }

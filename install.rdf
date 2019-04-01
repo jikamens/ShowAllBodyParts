@@ -14,7 +14,7 @@ You might also need this if you want to be able to remove inline images from mes
       <Description>
         <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id> <!-- Thunderbird -->
         <em:minVersion>8.0a1</em:minVersion>
-        <em:maxVersion>60.*</em:maxVersion>
+        <em:maxVersion>68.0a1</em:maxVersion>
       </Description>
     </em:targetApplication>
     <em:bootstrap>true</em:bootstrap>

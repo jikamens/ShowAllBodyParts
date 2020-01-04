@@ -1,7 +1,8 @@
 all: ShowAllBodyParts.xpi
 
-CMD=find . \( \( -name RCS -o -name .svn -o -name .git \) -prune \) -o \
-    \! -name '*~' \
+CMD=find . \( \( -name RCS -o -name .svn -o -name .git -o -name send-later \) \
+              -prune \) -o \
+    \! -name '*~' \! -name .gitmodules \
     \! -name '.\#*' \! -name '*,v' \! -name Makefile \! -name '*.xpi' \
     \! -name '\#*' \! -name '*.pl' \! -name .gitignore \! -name README.md \
     \! -name LICENSE -type f -print
